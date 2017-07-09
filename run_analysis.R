@@ -13,15 +13,15 @@
 library(plyr)
 
 # Load the features
-features <- read.table("./data/UCI HAR Dataset/features.txt")
+features <- read.table("features.txt")
 
 # Load the dataset and set the correct labels
-x_test <- read.table("./data/UCI HAR Dataset/test/X_test.txt")
-y_test <- read.table("./data/UCI HAR Dataset/test/y_test.txt", col.names = "Activity")
-subjects_test <- read.table("./data/UCI HAR Dataset/test/subject_test.txt", col.names = "Subject")
-x_train <- read.table("./data/UCI HAR Dataset/train/X_train.txt")
-y_train <- read.table("./data/UCI HAR Dataset/train/y_train.txt", col.names = "Activity")
-subjects_train <- read.table("./data/UCI HAR Dataset/train/subject_train.txt", col.names = "Subject")
+x_test <- read.table("./test/X_test.txt")
+y_test <- read.table("./test/y_test.txt", col.names = "Activity")
+subjects_test <- read.table("./test/subject_test.txt", col.names = "Subject")
+x_train <- read.table("./train/X_train.txt")
+y_train <- read.table("./train/y_train.txt", col.names = "Activity")
+subjects_train <- read.table("./train/subject_train.txt", col.names = "Subject")
 names(x_test) <- features$V2
 names(x_train) <- features$V2
 
@@ -35,7 +35,7 @@ columns <- grep("-(mean|std)\\(", features$V2)
 x_new <- x_combined[,columns]
 
 # Set descriptive activity names
-activities <- read.table("./data/UCI HAR Dataset/activity_labels.txt")
+activities <- read.table("activity_labels.txt")
 names(activities) <- c("Activity", "V2")
 y_combined_descriptive <- join(y_combined, activities)
 
