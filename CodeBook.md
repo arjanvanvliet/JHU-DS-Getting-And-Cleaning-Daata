@@ -71,4 +71,4 @@ fBodyBodyGyroMag-mean(), fBodyBodyGyroMag-std()
 
 fBodyBodyGyroJerkMag-mean(), fBodyBodyGyroJerkMag-std()
 
-The dataset contains 180 observations with 66 variables per subject, per activity.
+The dataset contains 180 observations with 66 variables per subject, per activity. The first column is an integer, the second column a string and the other columns are numeric.
