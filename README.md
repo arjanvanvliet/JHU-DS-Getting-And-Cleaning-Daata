@@ -1,4 +1,4 @@
-#Getting and Cleaning Data Course Project
+# Getting and Cleaning Data Course Project
 
 This dataset contains the following files:
 
